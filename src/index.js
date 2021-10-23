@@ -1,7 +1,10 @@
 import TG from 'telegram-bot-api'
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const api = new TG({
-  token: '2074302246:AAEgP3iVSbtHhx0syX4q-XvMAujWb2llSoQ'
+  token: process.env.BOT_TOKEN
 })
 const mp = new TG.GetUpdateMessageProvider();
 
