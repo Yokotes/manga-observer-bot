@@ -2,7 +2,7 @@ import io from 'socket.io-client'
 
 export default class SocketService {
   constructor() {
-    this.subscribers = [process.env.MY_ID]
+    this.subscribers = []
     this.io = io(process.env.MANGA_SERVER)
   }
 

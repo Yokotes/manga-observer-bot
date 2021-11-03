@@ -18,6 +18,7 @@ const sendUpdate = (chatId, data) => {
   api.sendMessage({chat_id: chatId, text: msg, parse_mode: 'Markdown'}).catch(console.error)
 }
 
+socketService.addSubscriber(process.env.MY_ID)
 socketService.subscribe(sendUpdate)
 api.setMessageProvider(mp);
 api.start().then(() => console.log('Manga Observer bot is up'));
